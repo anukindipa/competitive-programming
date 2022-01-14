@@ -1,0 +1,16 @@
+monthly practice competition to prepare for noi
+
+https://www.hackerrank.com/contests/noi-2021-nov/
+
+4 questions
+
+100 per each
+
+my solutions for the questions
+
+i had to submit dutches garden 3 times
+the first time i dint think through
+the second some tests ran out of time
+the third passed
+
+the hardest one was The bounteous knight
