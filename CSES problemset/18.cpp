@@ -10,19 +10,32 @@ int main(){
 	while(n--){
 		int k;
 		cin>>k;
-		int jj=9;
-		int m=1;
-		while(k>jj){
+		
+		int m =1;
+		int j =9;
+		while(k>j){
 			k = k-j;
-			jj=jj*10*m;
+			j = j * 10 * m;
+			cout<<j<<endl;
 			m++;
 		}
-		m++;
+		cout<<k;	
+		
+		
+		
+		
+		/*	
+
 		int nn = k/m;
-
-
-
-
+		if(k%m ==0){
+			nn-1;
+			cout<<nn%10<<endl;
+		}
+		else{
+			string s = to_string(nn);
+			cout<<s[k%m - 1]<<endl;
+		}
+		*/
 
 
 
