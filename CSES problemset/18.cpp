@@ -7,38 +7,31 @@ int main(){
 
 	int n;
 	cin>>n;
-	while(n--){
-		int k;
-		cin>>k;
+	for(int i=0;i<n;i++){
+		ll mm;
+		cin>>mm;
 		
-		int m =1;
-		int j =9;
-		while(k>j){
-			k = k-j;
-			j = j * 10 * m;
-			cout<<j<<endl;
-			m++;
+		ll k=mm;
+
+		ll h = 0;
+		ll nono = (9)*(pow(10,h))*((h+1));
+		while(k>(nono)){
+				k = k - (9*pow(10,h)*(h+1));
+				h++;
+				nono = (9)*(pow(10,h))*((h+1));
 		}
-		cout<<k;	
 		
-		
-		
-		
-		/*	
+		ll m = (k-1)/(h+1);
+		ll pp = (k-1)%(h+1);
+		ll oo = pow(10,h) + m;
+		string ss = to_string(oo);
+		cout<<ss[pp]<<endl;
+	}	
 
-		int nn = k/m;
-		if(k%m ==0){
-			nn-1;
-			cout<<nn%10<<endl;
-		}
-		else{
-			string s = to_string(nn);
-			cout<<s[k%m - 1]<<endl;
-		}
-		*/
+				
+	
+				
 
+	
+	}	
 
-
-	}
-
-}

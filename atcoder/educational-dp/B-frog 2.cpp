@@ -1,36 +1,37 @@
 #include<bits/stdc++.h>
-#define INF (unsigned)!((int)0)
 
 using namespace std;
 
 int main(){
-	int N,K;
-	cin>>N>>K;
-	int arr[N];
+	int INF = 2147483647;
+
+	int n,k;
+	cin>>n>>k;
+	int arr[n];
 	vector<int> v;
 
-	for(int i=0;i<N;i++){
-		int k;
-		cin>>k;
-		v.push_back(k);
+
+	for(int i=0;i<n;i++){
+		arr[i] = INF;
+		int x;
+		cin>>x;
+		v.push_back(x);
 	}
 
-	//arr[0] = 0;
-	//arr[1] = abs(v[0]-v[1]);
 
-
-	for(int i=0;i<N;i++){
-		int best=INF;
-		for(int j=0;i<K;i++){	
-			if( j>=i ){
-			best = min(best,arr[i-j]+abs(v[i-j]-v[i]));
-		}}
+	arr[0] =0;
+	for(int i=0;i<n;i++){
+		for(int j=1;j<k+1;j++){
+			if(i+j<n){
+				arr[i+j] = min(arr[i]+abs(v[i+j]-v[i]),arr[i+j]);
+			}
 	
-	arr[i] = best;
-	arr[0]=0;
+		}
 	}
-	cout<<arr[N-1];
+	cout<<arr[n-1];
+	
 
-	return 0;
+
+
 }
 
