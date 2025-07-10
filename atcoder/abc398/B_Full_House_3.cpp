@@ -7,13 +7,30 @@ using namespace std;
 #define vi vector<int>
 #define vll vector<long long>
 
-#define f(i, s, e) for (long long int i = s; i < e; i++)
+#define fs(i, s, e) for (long long int i = s; i < e; i++)
+#define f(i, e) for (long long int i = 0; i < e; i++)
 
 #define pb push_back
+
+#define gll(a) \
+  ll a;        \
+  cin >> a
 
 const ll INF = 1e9;
 
 void solve() {
+  map<ll, ll> m;
+  f(i, 7) {
+    gll(a);
+    m[a]++;
+  }
+  vll v;
+  for (auto x : m) {
+    v.pb(x.second);
+  }
+  sort(v.rbegin(), v.rend());
+  string ans = (v.size() > 1 && v[0] > 2 && v[1] > 1) ? "Yes\n" : "No\n";
+  cout << ans;
   return;
 }
 

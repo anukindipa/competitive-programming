@@ -7,13 +7,28 @@ using namespace std;
 #define vi vector<int>
 #define vll vector<long long>
 
-#define f(i, s, e) for (long long int i = s; i < e; i++)
+#define fs(i, s, e) for (long long int i = s; i < e; i++)
+#define f(i, e) for (long long int i = 0; i < e; i++)
 
 #define pb push_back
+
+#define gll(a) \
+  ll a;        \
+  cin >> a
 
 const ll INF = 1e9;
 
 void solve() {
+  gll(n);
+  string s;
+  cin >> s;
+  ll ans = 0;
+  f(i, n - 2) {
+    if (s[i] == '#' && s[i + 1] == '.' && s[i + 2] == '#') {
+      ans++;
+    }
+  }
+  cout << ans << endl;
   return;
 }
 

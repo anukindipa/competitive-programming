@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define ll long long
+
+#define vi vector<int>
+#define vll vector<long long>
+
+#define fs(i, s, e) for (long long int i = s; i < e; i++)
+#define f(i, e) for (long long int i = 0; i < e; i++)
+
+#define pb push_back
+
+#define gll(a) \
+  ll a;        \
+  cin >> a
+
+const ll INF = 1e9;
+
+void solve() {
+  gll(n);
+  gll(m);
+  vll v(n * m);
+  f(i, n) {
+    f(j, m) {
+      gll(x);
+      v[x] = i;
+    }
+  }
+  bool d = 1;
+  f(i, m) {
+    f(j, n) {
+      if (v[j] != v[i * n + j]) {
+        d = 0;
+      }
+    }
+  }
+  if (d) {
+    f(i, n) {
+      cout << v[i] + 1 << " ";
+    }
+    cout << endl;
+  } else {
+    cout << -1 << endl;
+  }
+  return;
+}
+
+int main() {
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
+  int tttt = 1;
+  cin >> tttt;
+  for (int ttt = 1; ttt <= tttt; ttt++) {
+    // cout << "Case #" << ttt << ": ";
+    solve();
+  }
+}
